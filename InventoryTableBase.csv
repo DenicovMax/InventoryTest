@@ -1,0 +1,4 @@
+---,ID,Name,Type,Rare,Icon,Mesh,Damage,Armor,Intelligence
+Smile,"Smile","NSLOCTEXT(""[6963F09E445C03690A57B8AF2173A478]"", ""CFABD4AC474FEC38887EDC9FD3E7A782"", ""GreenSmile"")","It_Misc","Ir_Epic","/Engine/EngineResources/AICON-Green.AICON-Green","None","0","0","0"
+Devil,"Devil","NSLOCTEXT(""[6963F09E445C03690A57B8AF2173A478]"", ""38DB18F34456A43A0ABFB6A16F4E6156"", ""RedDevil"")","It_Misc","Ir_Rare","/Engine/EngineResources/AICON-Red.AICON-Red","None","0","0","0"
+Target,"Target","NSLOCTEXT(""[6963F09E445C03690A57B8AF2173A478]"", ""8ECBB5044FC1224B4F156C8D86C50E2A"", ""YourTarget"")","It_Consumable","Ir_Common","/Engine/MobileResources/HUD/AnalogHat.AnalogHat","None","0","0","0"

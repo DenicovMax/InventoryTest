@@ -1,0 +1,4 @@
+---,ID,Name,Count,Icon,Type,EquipSlot
+Smile,"Smile","NSLOCTEXT(""[6963F09E445C03690A57B8AF2173A478]"", ""CFABD4AC474FEC38887EDC9FD3E7A782"", ""GreenSmile"")","33","/Engine/EngineResources/AICON-Green.AICON-Green","It_Misc","Es_Head"
+Devil,"Devil","NSLOCTEXT(""[6963F09E445C03690A57B8AF2173A478]"", ""38DB18F34456A43A0ABFB6A16F4E6156"", ""RedDevil"")","24","/Engine/EngineResources/AICON-Red.AICON-Red","It_Misc","Es_Head"
+Target,"Target","NSLOCTEXT(""[6963F09E445C03690A57B8AF2173A478]"", ""8ECBB5044FC1224B4F156C8D86C50E2A"", ""YourTarget"")","1111","/Engine/MobileResources/HUD/AnalogHat.AnalogHat","It_Consumable","Es_Head"

@@ -1,0 +1,15 @@
+# Default ignored files
+/shelf/
+/Binaries/
+/Intermediate/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.InventoryTest.iml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
