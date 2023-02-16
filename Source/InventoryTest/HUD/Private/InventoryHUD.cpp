@@ -24,6 +24,7 @@ void AInventoryHUD::HideWidget()
 	if(CurrentWidget)
 	{
 		CurrentWidget->RemoveFromParent();
+		CurrentWidget->SetVisibility(ESlateVisibility::Collapsed);
 		CurrentWidget = nullptr;
 	}
 }
@@ -32,5 +33,6 @@ UUserWidget* AInventoryHUD::CreateWidgetByClass(const TSubclassOf<UUserWidget> W
 {
 	CurrentWidget = CreateWidget(GetWorld(), WidgetClass);
 	CurrentWidget->AddToViewport();
+	CurrentWidget->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
 	return CurrentWidget;
 }

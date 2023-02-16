@@ -10,6 +10,7 @@
 #include "InventoryTest/Interfaces/IDamageTaker.h"
 #include "InventoryCharacter.generated.h"
 
+class UMediaPlayer;
 class UInventoryDeathWidget;
 class UInventoryHealthComponent;
 class AInventoryChest;
@@ -46,6 +47,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UInventoryHealthComponent* HealthComponent;
 
+	
+
 public:
 
 	virtual void TakeDamage(const FInventoryDamageData& DamageData) override;
@@ -53,4 +56,7 @@ public:
 	void HidePlayerInventory();
 
 	void UseItemFromInventory(UInventoryCoreCellWidget* Item);
+
+	void ShowMediaWidget();
+	void HideMediaWidget();
 };

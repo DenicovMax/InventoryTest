@@ -10,9 +10,8 @@ UENUM()
 enum class EWidgetID : uint8
 {
 	W_Death_Widget,
-	W_Equip_Widget,
 	W_HealthBar_Widget,
-	W_ChestInventory_Widget
+	W_Media_Widget
 };
 
 UCLASS()

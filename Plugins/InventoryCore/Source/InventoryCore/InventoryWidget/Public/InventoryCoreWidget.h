@@ -20,7 +20,7 @@ class INVENTORYCORE_API UInventoryCoreWidget : public UUserWidget
 
 public:
 
-	virtual void NativeConstruct() override;;
+	virtual void NativeConstruct() override;
 
 	void Init(int32 ItemsCount);
 

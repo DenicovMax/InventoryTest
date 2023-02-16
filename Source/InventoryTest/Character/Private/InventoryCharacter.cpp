@@ -28,6 +28,9 @@ void AInventoryCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 
 	PlayerInputComponent->BindAction("Inventory", IE_Pressed, this, &AInventoryCharacter::ShowPlayerInventory);
 	PlayerInputComponent->BindAction("NoInventory", IE_Repeat, this, &AInventoryCharacter::HidePlayerInventory);
+	
+	PlayerInputComponent->BindAction("MediaWidget", IE_Pressed, this, &AInventoryCharacter::ShowMediaWidget);
+	PlayerInputComponent->BindAction("HideMediaWidget", IE_Repeat, this, &AInventoryCharacter::HideMediaWidget);
 }
 
 void AInventoryCharacter::BeginPlay()
@@ -99,6 +102,32 @@ void AInventoryCharacter::UseItemFromInventory(UInventoryCoreCellWidget* Item)
 		Item->AddItem(ItemInfo);
 		ItemInventory->SetItem(Item->IndexInInventory, ItemInfo);
 		HealthComponent->SetHealth(HealthComponent->GetHealth() + 25.f);
+	}
+}
+
+void AInventoryCharacter::ShowMediaWidget()
+{
+	if(AInventoryPlayerController* PC = Cast<AInventoryPlayerController>(GetController()))
+	{
+		if(AInventoryHUD* HUD = Cast<AInventoryHUD>(PC->GetHUD()))
+		{
+			HUD->ShowWidget(EWidgetID::W_Media_Widget, 0);
+			
+			UGameplayStatics::GetPlayerController(GetWorld(), 0)->SetShowMouseCursor(true);
+		}
+	}
+}
+
+void AInventoryCharacter::HideMediaWidget()
+{
+	if(AInventoryPlayerController* PC = Cast<AInventoryPlayerController>(GetController()))
+	{
+		if(AInventoryHUD* HUD = Cast<AInventoryHUD>(PC->GetHUD()))
+		{
+			HUD->HideWidget();
+			
+			UGameplayStatics::GetPlayerController(GetWorld(), 0)->SetShowMouseCursor(false);
+		}
 	}
 }
 
