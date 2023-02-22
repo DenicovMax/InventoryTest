@@ -21,6 +21,10 @@
 		{
 			"Name": "InventoryCore",
 			"Enabled": true
+		},
+		{
+			"Name": "QuestSystem",
+			"Enabled": true
 		}
 	]
 }

@@ -1,9 +1,9 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.3",
-	"FriendlyName": "Inventory Core",
-	"Description": "Core of My First Inventory",
+	"VersionName": "1.0",
+	"FriendlyName": "Quest System",
+	"Description": "",
 	"Category": "My Plugins",
 	"CreatedBy": "Denisov Maxim",
 	"CreatedByURL": "",
@@ -16,9 +16,9 @@
 	"Installed": true,
 	"Modules": [
 		{
-			"Name": "InventoryCore",
-			"Type": "Editor",
-			"LoadingPhase": "PreDefault"
+			"Name": "QuestSystem",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	]
 }

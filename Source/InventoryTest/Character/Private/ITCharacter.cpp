@@ -41,7 +41,6 @@ void AITCharacter::BeginPlay()
 	{
 		InventoryManager->Init(LocalInventory);
 		InventoryManager->InitEquip(EquipInventory);
-		//ChestInventoryManager->Init(Chest->ChestInventory);
 	}
 }
 

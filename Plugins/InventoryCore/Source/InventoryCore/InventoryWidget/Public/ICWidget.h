@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "ICCellWidget.h"
 #include "Blueprint/UserWidget.h"
-#include "InventoryCore/Inventory/Public/ICComponent.h"
 #include "InventoryCore/Inventory/Public/ICData.h"
 #include "ICWidget.generated.h"
 

@@ -10,10 +10,9 @@
 #include "InventoryTest/Interfaces/ITDamageTaker.h"
 #include "ITCharacter.generated.h"
 
-class UMediaPlayer;
+
 class UITDeathWidget;
 class UITHealthComponent;
-class AITChest;
 
 UCLASS()
 class AITCharacter : public AITBaseCharacter, public IITDamageTaker
@@ -29,6 +28,8 @@ protected:
 
 	virtual void BeginPlay() override;
 
+protected:
+
 	UPROPERTY(EditDefaultsOnly)
 	UICEquipComponent* EquipInventory;
 	
@@ -37,9 +38,6 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly)
 	UICManagerComponent* InventoryManager;
-
-	UPROPERTY(EditAnywhere)
-	TSubclassOf<UITDeathWidget> DeathWidgetClass;
 	
 	UPROPERTY()
 	UITDeathWidget* DeathWidget;
@@ -47,11 +45,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UITHealthComponent* HealthComponent;
 
-	
-
 public:
 
 	virtual void TakeDamage(const FInventoryDamageData& DamageData) override;
+	
 	void ShowPlayerInventory();
 	void HidePlayerInventory();
 

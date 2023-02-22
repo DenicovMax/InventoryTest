@@ -5,7 +5,6 @@
 #include "Components/Image.h"
 #include "Components/TextBlock.h"
 #include "Input/Reply.h"
-//#include "InventoryTest/Character/Public/InventoryCharacter.h"
 #include "InventoryCore/Inventory/Public/ICComponent.h"
 #include "Kismet/GameplayStatics.h"
 

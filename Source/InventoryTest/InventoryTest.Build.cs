@@ -11,6 +11,6 @@ public class InventoryTest : ModuleRules
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject",
 			"Engine", "InputCore", "HeadMountedDisplay", 
-			"UMG" , "SlateCore", "InventoryCore", "MediaAssets", "DesktopPlatform", "Slate" });
+			"UMG" , "SlateCore", "InventoryCore", "MediaAssets", "DesktopPlatform", "Slate", "QuestSystem" });
 	}
 }
