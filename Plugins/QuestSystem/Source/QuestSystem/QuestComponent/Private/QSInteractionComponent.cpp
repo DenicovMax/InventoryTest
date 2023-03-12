@@ -2,7 +2,7 @@
 #include "QuestSystem/QuestComponent/Public/QSInteractionComponent.h"
 
 #include "Blueprint/UserWidget.h"
-#include "QuestSystem/QuestInterface/QSInteractbleObject.h"
+#include "QuestSystem/QuestInterface/Public/QSInteractbleObject.h"
 
 
 UQSInteractionComponent::UQSInteractionComponent()

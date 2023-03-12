@@ -11,6 +11,7 @@
 #include "InventoryCore/InventoryWidget/Public/ICWidget.h"
 #include "InventoryTest/PlacebleActors/Public/ITChest.h"
 #include "Kismet/GameplayStatics.h"
+#include "QuestSystem/QuestComponent/Public/QSInteractionComponent.h"
 
 
 AITCharacter::AITCharacter()
@@ -18,6 +19,9 @@ AITCharacter::AITCharacter()
 	LocalInventory = CreateDefaultSubobject<UICComponent>("LocalInventory");
 	EquipInventory = CreateDefaultSubobject<UICEquipComponent>("EquipInventory");
 	InventoryManager = CreateDefaultSubobject<UICManagerComponent>("InventoryManager");
+
+	InteractionComponent = CreateDefaultSubobject<UQSInteractionComponent>("Interaction Component");
+	InteractionComponent->SetupAttachment(RootComponent);
 
 	HealthComponent = CreateDefaultSubobject<UITHealthComponent>("Health Component");
 }
@@ -31,6 +35,8 @@ void AITCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	
 	PlayerInputComponent->BindAction("MediaWidget", IE_Pressed, this, &AITCharacter::ShowMediaWidget);
 	PlayerInputComponent->BindAction("HideMediaWidget", IE_Repeat, this, &AITCharacter::HideMediaWidget);
+
+	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &AITCharacter::InteractMe);
 }
 
 void AITCharacter::BeginPlay()
@@ -128,6 +134,11 @@ void AITCharacter::HideMediaWidget()
 			UGameplayStatics::GetPlayerController(GetWorld(), 0)->SetShowMouseCursor(false);
 		}
 	}
+}
+
+void AITCharacter::InteractMe()
+{
+	InteractionComponent->Interact();
 }
 
 

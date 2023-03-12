@@ -11,6 +11,7 @@
 #include "ITCharacter.generated.h"
 
 
+class UQSInteractionComponent;
 class UITDeathWidget;
 class UITHealthComponent;
 
@@ -45,6 +46,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UITHealthComponent* HealthComponent;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UQSInteractionComponent* InteractionComponent;
+
 public:
 
 	virtual void TakeDamage(const FInventoryDamageData& DamageData) override;
@@ -56,4 +60,5 @@ public:
 
 	void ShowMediaWidget();
 	void HideMediaWidget();
+	void InteractMe();
 };
