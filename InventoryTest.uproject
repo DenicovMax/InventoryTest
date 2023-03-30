@@ -25,6 +25,10 @@
 		{
 			"Name": "QuestSystem",
 			"Enabled": true
+		},
+		{
+			"Name": "Water",
+			"Enabled": true
 		}
 	]
 }
